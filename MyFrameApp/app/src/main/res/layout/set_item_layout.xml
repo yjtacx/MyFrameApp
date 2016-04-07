@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip" 
+        android:background="@drawable/set_item_selector">
+
+        <ImageView
+            android:id="@+id/set_item_image"
+            android:layout_width="@dimen/set_left_image_height"
+            android:layout_height="@dimen/set_left_image_width"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+             android:id="@+id/set_item_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/list_icon_next"
+            android:layout_marginRight="15dip"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/lightgray" />
+
+</LinearLayout><!-- From: file:/D:/Energy_Housekeeper/housekeeper/res/layout/set_item_layout.xml -->

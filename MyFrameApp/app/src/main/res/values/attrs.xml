@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="titlebar">
+        <attr name="centertext" format="reference|string"/>
+        <attr name="centerimg" format="reference"/>
+
+        <attr name="lefttext" format="reference|string"/>
+
+        <attr name="righttext_1"  format="reference|string"/>
+        <attr name="righttext_2" format="reference|string"/>
+
+        <attr name="leftimg" format="reference"/>
+
+        <attr name="rightimg_1" format="reference"/>
+        <attr name="rightimg_2" format="reference"/>
+
+        <attr name="titlevisible"  format="boolean"/>
+
+
+
+    </declare-styleable>
+</resources>

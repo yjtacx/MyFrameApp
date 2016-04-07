@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="set_left_image_width">22dip</dimen>
+    <dimen name="set_left_image_height">22dip</dimen>
+    <dimen name="main_tb_text_size">12sp</dimen>
+
+
+    <!--标题栏-->
+    <dimen name="titlebar_hight">48dp</dimen>
+
+
+
+    <dimen name="titlebar_item_hight">46dp</dimen>
+    <dimen name="titlebar_item_textsize">16sp</dimen>
+    <dimen name="titlebar_img_padding">4dp</dimen>
+    <dimen name="titlebar_center_textsize">18sp</dimen>
+</resources>

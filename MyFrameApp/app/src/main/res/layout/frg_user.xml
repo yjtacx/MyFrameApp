@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.yjt.frame.widget.OverScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_color"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/lightgray"
+                android:layout_marginTop="12dip"/>
+
+            <com.yjt.frame.widget.SetItemView
+                android:id="@+id/personal_info"
+                imgres="@mipmap/userinfo_icon"
+                value="@string/set_item_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <com.yjt.frame.widget.SetItemView
+                android:id="@+id/gatewayitem"
+                imgres="@mipmap/userinfo_icon"
+                value="@string/set_item_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <com.yjt.frame.widget.SetItemView
+                android:id="@+id/usercenter_housemanage_item"
+                imgres="@mipmap/userinfo_icon"
+                value="@string/set_item_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="12dip"
+                android:background="@color/lightgray" />
+
+            <com.yjt.frame.widget.SetItemView
+                android:id="@+id/update_item_set"
+                imgres="@mipmap/userinfo_icon"
+                value="@string/set_update"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/lightgray"
+                android:visibility="gone" />
+
+            <com.yjt.frame.widget.SetItemView
+                android:id="@+id/usercenter_item_delete"
+                imgres="@mipmap/userinfo_icon"
+                value="@string/set_item_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </com.yjt.frame.widget.OverScrollView>
+
+</LinearLayout>

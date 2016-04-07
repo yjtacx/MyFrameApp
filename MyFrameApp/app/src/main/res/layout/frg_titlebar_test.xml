@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.yjt.frame.widget.OverScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_color"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加左侧返回按钮" />
+
+                <Button
+                    android:id="@+id/btn15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加左侧二级标题" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加左侧带文字返回按钮" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加中间文字标题" />
+
+                <Button
+                    android:id="@+id/btn4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更换中间文字标题" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="去掉中间文字标题" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加中间自定义标题" />
+
+                <Button
+                    android:id="@+id/btn6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加中间图片标题" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加右侧图片按钮" />
+
+                <Button
+                    android:id="@+id/btn12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加右侧黄色文字按钮" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="去掉右侧第二个按钮" />
+
+                <Button
+                    android:id="@+id/btn11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更换标题栏背景色" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="隐藏标题栏" />
+
+                <Button
+                    android:id="@+id/btn14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="显示标题栏" />
+
+                <Button
+                    android:id="@+id/btn_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="清空标题栏" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:id="@+id/btn17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加右侧图片按钮" />
+
+                <Button
+                    android:id="@+id/btn18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加右侧文字按钮" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加右侧自定义按钮" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </com.yjt.frame.widget.OverScrollView>
+
+</LinearLayout>

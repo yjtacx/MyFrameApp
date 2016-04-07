@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (C) 2008 ZXing authors
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<resources>
+  <!-- titlebar IDs -->
+  <!--
+  <item type="id" name="titlebar_leftimage"/>
+  <item type="id" name="titlebar_lefttext"/>
+  <item type="id" name="titlebar_centertext"/>
+  <item type="id" name="titlebar_centerimage"/>
+  <item type="id" name="titlebar_rightimage_1"/>
+  <item type="id" name="titlebar_rightimage_2"/>
+  <item type="id" name="titlebar_righttext_1"/>
+  <item type="id" name="titlebar_righttext_2"/>
+  -->
+
+  <!--titlebar item -->
+  <item type="id" name="titlebar_left_1"/>
+  <item type="id" name="titlebar_left_2"/>
+  <item type="id" name="titlebar_right_1"/>
+  <item type="id" name="titlebar_right_2"/>
+  <item type="id" name="titlebar_right_3"/>
+
+  <item type="id" name="titlebar_center"/>
+  <item type="id" name="titlebar_leftmaintitle"/>
+  <item type="id" name="titlebar_leftsubtitle"/>
+
+  <!--
+  <item type="id" name="about_version_code">false</item>
+  <item type="id" name="split">false</item>
+  -->
+</resources>

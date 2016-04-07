@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">我的框架</string>
+    <string name="title_main_usercenter">用户中心</string>
+    <string name="title_first_login">登录</string>
+    <string name="title_first_register">注册</string>
+    <string name="title_sub_systemset">系统设置</string>
+    <string name="title_sub_add">添加账户</string>
+    <string name="title_about">关于</string>
+
+
+    <!--MainActivity-->
+    <string name="main_tab_new">新闻</string>
+    <string name="main_tab_gd">观点</string>
+    <string name="main_tab_zx">自选</string>
+    <string name="main_tab_hq">行情</string>
+    <string name="main_tab_gr">个人</string>
+
+    <string name="name_not_empty">用户名不能为空</string>
+    <string name="pwd_not_empty">用户密码不能为空</string>
+
+    <string name="app_error">应用程序错误</string>
+    <string name="operate_fail">操作失败，请重试</string>
+    <string name="commit_fail">提交数据失败</string>
+    <string name="app_error_message">很抱歉，应用程序出现错误，即将退出。\n请提交错误报告，我们会尽快修复这个问题！</string>
+    <string name="submit_report">提交报告</string>
+    <!-- 其他 -->
+    <string name="sure">确定</string>
+    <string name="cancle">取消</string>
+    <string name="back_exit_tips">再按一次返回键退出应用</string>
+
+
+
+    <!--设置-->
+    <string name="title_set">设置</string>
+    <string name="set_item_pwd">登录密码设置</string>
+    <string name="set_update">自动更新</string>
+    <string name="set_item_gesture">手势密码设置</string>
+    <string name="cancel">取消</string>
+    <string name="try_again">重试</string>
+    <string name="goon">继续</string>
+    <string name="confirm">确认</string>
+
+    <string name="title_msg">消息</string>
+
+    <string name="title_leftmain">主标题</string>
+    <string name="title_leftsub">左侧次标题</string>
+</resources>

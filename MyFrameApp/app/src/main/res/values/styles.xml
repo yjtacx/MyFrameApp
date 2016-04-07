@@ -1,0 +1,55 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+    <!-- 自定义loading dialog -->
+    <style name="loading_dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">#00000000</item> <!-- 设置自定义布局的背景透明 -->
+    </style>
+    <style name="Dialog_Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- <item name="android:background">@drawable/selector_head_black_btn</item>-->
+    <!--Titlebar-->
+    <style name="TypeBarItem">
+        <item name="android:layout_height">@dimen/titlebar_item_hight</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="TitleBarItem.ImageView" parent="TypeBarItem">
+        <item name="android:layout_width">@dimen/titlebar_item_hight</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:padding">@dimen/titlebar_img_padding</item>
+    </style>
+    <style name="TitleBarItem.TextView" parent="TypeBarItem">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/titlebar_img_padding</item>
+        <item name="android:paddingRight">@dimen/titlebar_img_padding</item>
+        <item name="android:gravity">center</item>
+        <item name="android:color">@color/white</item>
+        <item name="android:textSize">@dimen/titlebar_item_textsize</item>
+    </style>
+    <style name="TitleBarItem.CenterView" parent="TypeBarItem">
+        <item name ="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+    <style name="TitleBarItem.CenterTextView" parent="TitleBarItem.TextView">
+        <item name ="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:textSize">@dimen/titlebar_center_textsize</item>
+    </style>
+    <style name="TitleBarItem.CenterImgView" parent="TitleBarItem.CenterView">
+    </style>
+</resources>

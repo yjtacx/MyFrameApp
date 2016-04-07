@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_constact"
+    android:layout_width="160dp"
+    android:layout_height="30dip"
+    android:background="@drawable/updown_bg"
+    >
+
+    <Button
+        android:id="@+id/up_btn"
+        android:layout_width="80dp"
+        android:layout_height="fill_parent"
+        android:background="@drawable/down_up_selector"
+        android:text="新闻"
+        android:textColor="@color/text_blue_white"
+        android:textSize="16sp"
+        />
+
+    <Button
+        android:id="@+id/down_btn"
+        android:layout_width="80dp"
+        android:layout_height="fill_parent"
+        android:background="@drawable/up_down_selector"
+        android:text="7*24小时"
+        android:textColor="@color/text_blue_white"
+        android:textSize="16sp"
+        android:layout_toRightOf="@+id/up_btn"/>
+</RelativeLayout>
