@@ -172,6 +172,10 @@ public class TitleBarEleUtil {
         }
     }
 
+    /**
+     * 添加左侧带标题的返回按钮
+     * @param baritem
+     */
     public void addLeftBackTextView(BarItem baritem){
         TextView textView = new TextView(mcontext);
         RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
@@ -185,7 +189,7 @@ public class TitleBarEleUtil {
         textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, TittleBarConfig.TEXTSIZE_BUTTON);
         textView.setId(R.id.titlebar_left_1);
         textView.setGravity(Gravity.CENTER_VERTICAL);
-        Drawable drawable= mcontext.getResources().getDrawable(R.mipmap.back_icon_normal);
+        Drawable drawable= mcontext.getResources().getDrawable(TittleBarConfig.BACK_BUTTON_RES);
 /// 这一步必须要做,否则不会显示.
         drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
         textView.setCompoundDrawables(drawable,null,null,null);

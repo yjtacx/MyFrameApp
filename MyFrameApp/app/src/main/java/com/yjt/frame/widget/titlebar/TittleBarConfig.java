@@ -1,5 +1,8 @@
 package com.yjt.frame.widget.titlebar;
 
+
+import com.yjt.frame.R;
+
 /**
  * Created by yujiangtao on 16/4/7.
  */
@@ -38,4 +41,9 @@ public class TittleBarConfig {
      * 标题栏左侧次标题的文字大小
      */
     public static final int TEXTSIZE_TITLE_SUB=8;//SP
+    /**
+     * 带文字返回按钮的默认图标
+     */
+    public static final int BACK_BUTTON_RES= R.mipmap.back_icon_tv;
+
 }
