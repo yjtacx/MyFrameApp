@@ -16,8 +16,7 @@ public class PwdSetFrg extends BaseFrg {
     @Override
     protected void initView() {
         titlebar.setLeftImage(R.mipmap.back_icon_normal);
-        titlebar.setLeftMainText(R.string.title_leftmain);
-        titlebar.setLeftSubText(R.string.title_leftsub);
+        titlebar.setLeftMainSubText(R.string.title_leftmain,R.string.title_leftsub);
         titlebar.setRightImage(R.mipmap.actionbar_icon_add);
         titlebar.setRightImage(R.mipmap.actionbar_icon_add);
         titlebar.setRightImage(R.mipmap.actionbar_icon_add);

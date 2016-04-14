@@ -16,7 +16,6 @@ public class GetstureFrg extends BaseFrg {
     @Override
     protected void initView() {
         titlebar.setLeftImage(R.mipmap.back_icon_normal);
-        titlebar.setLeftMainText(R.string.set_item_gesture);
         titlebar.setRightImage(R.mipmap.actionbar_icon_add);
         titlebar.setRightImage(R.mipmap.actionbar_icon_add);
         titlebar.setRightImage(R.mipmap.actionbar_icon_add);

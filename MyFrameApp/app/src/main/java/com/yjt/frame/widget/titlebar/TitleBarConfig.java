@@ -1,14 +1,35 @@
 package com.yjt.frame.widget.titlebar;
 
 
+
 import com.yjt.frame.R;
 
 /**
  * Created by yujiangtao on 16/4/7.
  */
-public class TittleBarConfig {
+public class TitleBarConfig {
 
-    public static final String TITLEBAR_BACK_COLOR="#3CA5E6";
+    /**
+     * 默认的标题栏按钮文字颜色
+     */
+    public static final String DEFAULT_BARTEXT_COLOR="#ffffff";
+    /**
+     * 标题栏背景色
+     */
+    public static final String DEFAULT_TITLEBAR_COLOR="#3CA5E6";
+    /**
+     * 标题栏按钮按下的背景颜色
+     */
+    public static final String PRESSED_COLOR="#20ffffff";
+    /**
+     * 标题栏按钮正常背景色
+     */
+    public static final String NORMAL_COLOR="#00000000";
+    /**
+     * 标题栏按钮focus状态和select状态的背景色
+     */
+    public static final String FOCUSED_COLOR="#40ffffff";
+
     /**
      * 标题栏高度
      */
@@ -40,7 +61,7 @@ public class TittleBarConfig {
     /**
      * 标题栏左侧次标题的文字大小
      */
-    public static final int TEXTSIZE_TITLE_SUB=8;//SP
+    public static final int TEXTSIZE_TITLE_SUB=10;//SP
     /**
      * 带文字返回按钮的默认图标
      */
