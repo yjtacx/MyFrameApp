@@ -1,6 +1,7 @@
 package com.yjt.frame.frg;
 
 import android.annotation.TargetApi;
+import android.graphics.Color;
 import android.os.Build;
 import android.view.View;
 import android.widget.Switch;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 
 import com.yjt.frame.R;
 import com.yjt.frame.widget.SwitchTV;
+import com.yjt.frame.widget.titlebar.statusbar.SystemBarTintManager;
 
 /**
  * Created by yujiangtao on 16/4/6.
@@ -41,6 +43,9 @@ public class TestTitleBarFrg extends BaseFrg implements View.OnClickListener {
         findViewById(R.id.btn17).setOnClickListener(this);
         findViewById(R.id.btn18).setOnClickListener(this);
         findViewById(R.id.btn19).setOnClickListener(this);
+        findViewById(R.id.btn20).setOnClickListener(this);
+        findViewById(R.id.btn21).setOnClickListener(this);
+        findViewById(R.id.btn22).setOnClickListener(this);
         findViewById(R.id.btn_clear).setOnClickListener(this);
     }
 
@@ -140,7 +145,15 @@ public class TestTitleBarFrg extends BaseFrg implements View.OnClickListener {
                 Switch aSwitch = new Switch(getActivity());
                 titlebar.setRightView(aSwitch);
                 break;
-
+            case R.id.btn20:
+                titlebar.setStatusBarEnable(getActivity());
+                break;
+            case R.id.btn21:
+                titlebar.setStatusBarColor(getActivity(),Color.parseColor("#ff0000"));
+                break;
+            case R.id.btn22:
+                titlebar.setStatusBarDefault();
+                break;
         }
     }
 

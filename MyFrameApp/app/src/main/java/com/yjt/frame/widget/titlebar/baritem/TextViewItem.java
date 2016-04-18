@@ -7,19 +7,19 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.yjt.frame.R;
+import com.yjt.frame.widget.titlebar.barHelper.BarType;
 import com.yjt.frame.widget.titlebar.TitleBarConfig;
 import com.yjt.frame.widget.titlebar.TitleBarView;
-import com.yjt.frame.widget.titlebar.entity.BarTextEntity;
+import com.yjt.frame.widget.titlebar.barentity.BarTextEntity;
 
 /**
  * Created by yujiangtao on 16/4/11.
  */
-public class TextViewItem extends BarItem {
+    public class TextViewItem extends BarItem {
     protected TextView textView=null;
     protected int textcolor;
     protected String text;
-    protected boolean backable=false;
+    protected boolean isbacktext=false;
 
 
     public TextViewItem(TitleBarView titleBarView, BarTextEntity textbean){
@@ -29,37 +29,44 @@ public class TextViewItem extends BarItem {
         this.id=textbean.id;
          this.textcolor=textbean.textColor;
         this.clickable=textbean.clickable;
-        this.backable = textbean.backable;
+        this.isbacktext = textbean.isbacktext;
         textView = new TextView(mcontext);
+        barType= textbean.itemtype;
     }
 
 
     @Override
-    protected void initItemView() {
+    protected void buildView() {
 
         int padding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                TitleBarConfig.ITEM_TEXT_PADDING,mcontext.getResources().getDisplayMetrics());
+                TitleBarConfig.DEFAULT_ITEM_TEXT_PADDING,
+                mcontext.getResources().getDisplayMetrics());
         RelativeLayout.LayoutParams lp;
         switch(bp){
             case Left:
                 lp=getLeftLayoutParams();
                 textView.setPadding(padding, 0, padding, 0);
-                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, TitleBarConfig.TEXTSIZE_BUTTON);
-                if(backable){
-                    Drawable drawable= mcontext.getResources().getDrawable(TitleBarConfig.BACK_BUTTON_RES);
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP,
+                        TitleBarConfig.DEFAULT_TEXTSIZE_BUTTON);
+                if(isbacktext){
+                    Drawable drawable= mcontext.getResources().getDrawable(
+                            TitleBarConfig.DEFAULT_BACK_BUTTON_RES);
                     // 这一步必须要做,否则不会显示.
-                    drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
+                    drawable.setBounds(0, 0, drawable.getMinimumWidth(),
+                            drawable.getMinimumHeight());
                     textView.setCompoundDrawables(drawable,null,null,null);
                 }
                 break;
             case Right:
                lp=getRightLayoutParams();
                 textView.setPadding(padding, 0, padding, 0);
-                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, TitleBarConfig.TEXTSIZE_BUTTON);
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP,
+                        TitleBarConfig.DEFAULT_TEXTSIZE_BUTTON);
                 break;
             case Center:
                 lp=getCenterLayoutParams();
-                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, TitleBarConfig.TEXTSIZE_TITLE);
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_SP,
+                        TitleBarConfig.DEFAULT_TEXTSIZE_TITLE);
                 break;
             default:throw new RuntimeException("BarPosition 不存在");
 
@@ -83,51 +90,10 @@ public class TextViewItem extends BarItem {
         return textView;
     }
 
-    /**
-     * 左侧
-     * @return
-     */
-    protected RelativeLayout.LayoutParams getLeftLayoutParams(){
-        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,
-                (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                        TitleBarConfig.ITEM_HEIGHT, mcontext.getResources().getDisplayMetrics()));
-        if (id == R.id.titlebar_left_2)
-            lp.addRule(RelativeLayout.RIGHT_OF, R.id.titlebar_left_1);
-        else lp.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
-        lp.addRule(RelativeLayout.CENTER_VERTICAL);
-        return lp;
+    @Override
+    protected int getWidth() {
+        return  RelativeLayout.LayoutParams.WRAP_CONTENT;
     }
 
-    /**
-     * 中间
-     * @return
-     */
-    protected RelativeLayout.LayoutParams getCenterLayoutParams(){
-        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-        lp.addRule(RelativeLayout.CENTER_IN_PARENT);
-        return lp;
-
-    }
-
-    /**
-     * 右侧
-     * @return
-     */
-    protected RelativeLayout.LayoutParams getRightLayoutParams(){
-        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,
-                (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                        TitleBarConfig.ITEM_HEIGHT,
-                        mcontext.getResources().getDisplayMetrics()));
-        if (id == R.id.titlebar_right_2)
-            lp.addRule(RelativeLayout.LEFT_OF, R.id.titlebar_right_1);
-        else if (id == R.id.titlebar_right_3)
-            lp.addRule(RelativeLayout.LEFT_OF, R.id.titlebar_right_2);
-        else lp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-        lp.addRule(RelativeLayout.CENTER_VERTICAL);
-        return lp;
-    }
 
 }

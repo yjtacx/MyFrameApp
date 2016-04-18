@@ -1,4 +1,4 @@
-package com.yjt.frame.manager;
+package com.yjt.frame.widget.titlebar.statusbar;
 
 /**
  * Created by yujiangtao on 2015/9/19.

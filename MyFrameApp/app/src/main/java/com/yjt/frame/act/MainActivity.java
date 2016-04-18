@@ -15,11 +15,9 @@ import com.yjt.frame.app.DoubleClickExitHelper;
 import com.yjt.frame.app.Main;
 import com.yjt.frame.app.Sub;
 import com.yjt.frame.config.Constants;
-import com.yjt.frame.frg.BaseWebViewFrg;
 import com.yjt.frame.frg.GuandianFrg;
 import com.yjt.frame.util.SharePrefUtil;
 import com.yjt.frame.widget.SwitchTV;
-import com.yjt.frame.widget.titlebar.BarOrder;
 
 
 /**
@@ -161,14 +159,6 @@ public class MainActivity extends BaseActivity implements TabHost.OnTabChangeLis
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            //如果是webviewfrg,能返回就返回
-            if(getCurrentFragment() instanceof BaseWebViewFrg){
-                BaseWebViewFrg webViewFrg= (BaseWebViewFrg) getCurrentFragment();
-                if(webViewFrg.getmWebView().canGoBack()){
-                    webViewFrg.getmWebView().goBack();
-                    return true;
-                }
-            }
             // 是否退出应用
             if (Constants.KeyDoubleExit) {
                 return mDoubleClickExitHelper.onKeyDown(keyCode, event);

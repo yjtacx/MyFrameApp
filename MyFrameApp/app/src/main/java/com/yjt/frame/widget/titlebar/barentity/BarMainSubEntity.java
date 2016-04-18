@@ -1,4 +1,4 @@
-package com.yjt.frame.widget.titlebar.entity;
+package com.yjt.frame.widget.titlebar.barentity;
 
 
 /**

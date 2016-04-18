@@ -23,4 +23,6 @@ public class GuandianFrg extends BaseWebViewFrg {
     protected void initview() {
         mWebView.loadUrl("https://www.baidu.com/");
     }
+
+
 }

@@ -1,7 +1,7 @@
-package com.yjt.frame.widget.titlebar.entity;
+package com.yjt.frame.widget.titlebar.barentity;
 
-import com.yjt.frame.widget.titlebar.BarPosition;
-import com.yjt.frame.widget.titlebar.BarType;
+import com.yjt.frame.widget.titlebar.barHelper.BarPosition;
+import com.yjt.frame.widget.titlebar.barHelper.BarType;
 
 /**
  * Created by yujiangtao on 16/3/31.

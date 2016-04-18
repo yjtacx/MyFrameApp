@@ -7,8 +7,6 @@ import com.yjt.frame.act.SubpageActivity;
 import com.yjt.frame.app.Sub;
 import com.yjt.frame.config.Constants;
 import com.yjt.frame.util.FragmentUtil;
-import com.yjt.frame.widget.titlebar.BarOrder;
-import com.yjt.frame.widget.titlebar.TitleBarView;
 
 /**
  * Created by yujiangtao on 16/3/27.

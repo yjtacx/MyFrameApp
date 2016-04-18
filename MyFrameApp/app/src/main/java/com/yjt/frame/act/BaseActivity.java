@@ -17,7 +17,7 @@ import com.yjt.frame.app.Sub;
 import com.yjt.frame.config.Constants;
 import com.yjt.frame.manager.AppManager;
 import com.yjt.frame.manager.FrgManager;
-import com.yjt.frame.manager.SystemBarTintManager;
+import com.yjt.frame.widget.titlebar.statusbar.SystemBarTintManager;
 import com.yjt.frame.util.IntentUtil;
 import com.yjt.frame.util.SharePrefUtil;
 import com.yjt.frame.widget.titlebar.TitleBarView;
@@ -32,7 +32,7 @@ import com.yjt.frame.widget.titlebar.TitlebarCallback;
 public abstract class BaseActivity extends FragmentActivity implements
 		TitlebarCallback {
 	public FrgManager frgmanager;
-	public SystemBarTintManager tintManager=null;
+
 	protected TitleBarView titleBarView=null;
 	@Override
 	protected void onCreate(final Bundle bundle) {
@@ -49,35 +49,13 @@ public abstract class BaseActivity extends FragmentActivity implements
 			((ViewGroup)rootview).addView(titleBarView,0);
 			titleBarView.setTitleBarCall(this);
 		}
-		initSystemBar(this);
+
 		if(bundle!=null) {
 		}
 		initControl(bundle);
 	}
 
 
-	public void initSystemBar(Activity activity) {
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-			setTranslucentStatus(activity, true);
-		}
-		tintManager = new SystemBarTintManager(activity);
-		tintManager.setStatusBarTintEnabled(true);
-		// 使用颜色资源
-        tintManager.setStatusBarTintResource(Color.TRANSPARENT);
-	}
-
-	@TargetApi(19)
-	private static void setTranslucentStatus(Activity activity, boolean on) {
-		Window win = activity.getWindow();
-		WindowManager.LayoutParams winParams = win.getAttributes();
-		final int bits = WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
-		if (on) {
-			winParams.flags |= bits;
-		} else {
-			winParams.flags &= ~bits;
-		}
-		win.setAttributes(winParams);
-	}
 
 	protected abstract void initControl(Bundle savedInstanceState);
 	protected abstract  boolean hasTitleBar();

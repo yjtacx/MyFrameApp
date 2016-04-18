@@ -1,21 +1,27 @@
-package com.yjt.frame.widget.titlebar;
+package com.yjt.frame.widget.titlebar.barHelper;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.StateListDrawable;
 
+import com.yjt.frame.widget.titlebar.TitleBarConfig;
+
 /**
  * Created by yujiangtao on 16/4/11.
  */
 public class TitleBarUtil {
 
-    public static ColorDrawable pressedDrawable = new ColorDrawable(Color.parseColor(TitleBarConfig.PRESSED_COLOR));
-    public static ColorDrawable nomalDrawable = new ColorDrawable(Color.parseColor(TitleBarConfig.NORMAL_COLOR));
-    public static ColorDrawable focusedDrawable = new ColorDrawable(Color.parseColor(TitleBarConfig.FOCUSED_COLOR));
+    public static ColorDrawable pressedDrawable =
+            new ColorDrawable(Color.parseColor(TitleBarConfig.DEFAULT_PRESSED_COLOR));
+    public static ColorDrawable nomalDrawable =
+            new ColorDrawable(Color.parseColor(TitleBarConfig.DEFAULT_NORMAL_COLOR));
+    public static ColorDrawable focusedDrawable =
+            new ColorDrawable(Color.parseColor(TitleBarConfig.DEFAULT_FOCUSED_COLOR));
 
     /**
      * 获取标题栏按钮的背景图片列表
+     *
      * @return StateListDrawable
      */
     public static StateListDrawable getDrawableSelector() {
@@ -38,14 +44,15 @@ public class TitleBarUtil {
 
     /**
      * 获取标题栏按钮的背景颜色列表
+     *
      * @return ColorStateList
      */
 
     public static ColorStateList getColorSelector() {
-        int[] colors = new int[]{Color.parseColor(TitleBarConfig.PRESSED_COLOR),
-                Color.parseColor(TitleBarConfig.FOCUSED_COLOR),
-                Color.parseColor(TitleBarConfig.FOCUSED_COLOR),
-                Color.parseColor(TitleBarConfig.NORMAL_COLOR)};
+        int[] colors = new int[]{Color.parseColor(TitleBarConfig.DEFAULT_PRESSED_COLOR),
+                Color.parseColor(TitleBarConfig.DEFAULT_FOCUSED_COLOR),
+                Color.parseColor(TitleBarConfig.DEFAULT_FOCUSED_COLOR),
+                Color.parseColor(TitleBarConfig.DEFAULT_NORMAL_COLOR)};
         int[][] states = new int[6][];
         states[0] = new int[]{android.R.attr.state_pressed};
         states[1] = new int[]{android.R.attr.state_focused};
@@ -54,5 +61,6 @@ public class TitleBarUtil {
         ColorStateList colorList = new ColorStateList(states, colors);
         return colorList;
     }
+
 
 }

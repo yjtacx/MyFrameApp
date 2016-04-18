@@ -7,32 +7,33 @@ import android.util.TypedValue;
 import android.view.Gravity;
 import android.widget.RelativeLayout;
 
+import com.yjt.frame.widget.titlebar.barHelper.BarType;
 import com.yjt.frame.widget.titlebar.TitleBarConfig;
 import com.yjt.frame.widget.titlebar.TitleBarView;
-import com.yjt.frame.widget.titlebar.entity.BarMainSubEntity;
+import com.yjt.frame.widget.titlebar.barentity.BarMainSubEntity;
 
 /**
  * Created by yujiangtao on 16/4/13.
  */
-public class BarMainSubItem extends TextViewItem {
+public class MainSubItem extends TextViewItem {
     BarMainSubEntity entity;
     int maintextsize;
     int subtextsize;
 
-    public BarMainSubItem(TitleBarView titleBarView, BarMainSubEntity textbean) {
+    public MainSubItem(TitleBarView titleBarView, BarMainSubEntity textbean) {
         super(titleBarView, textbean);
-        
+        barType = BarType.TMainSubText;
         entity = textbean;
         maintextsize = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
-                TitleBarConfig.TEXTSIZE_TITLE_MAIN,mcontext.getResources().getDisplayMetrics());
+                TitleBarConfig.DEFAULT_TEXTSIZE_TITLE_MAIN,mcontext.getResources().getDisplayMetrics());
         subtextsize = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,
-                TitleBarConfig.TEXTSIZE_TITLE_SUB,mcontext.getResources().getDisplayMetrics());
+                TitleBarConfig.DEFAULT_TEXTSIZE_TITLE_SUB,mcontext.getResources().getDisplayMetrics());
     }
 
     @Override
-    protected void initItemView() {
+    protected void buildView() {
         int padding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                TitleBarConfig.ITEM_TEXT_PADDING,mcontext.getResources().getDisplayMetrics());
+                TitleBarConfig.DEFAULT_ITEM_TEXT_PADDING,mcontext.getResources().getDisplayMetrics());
         RelativeLayout.LayoutParams lp;
         switch(bp){
             case Left:

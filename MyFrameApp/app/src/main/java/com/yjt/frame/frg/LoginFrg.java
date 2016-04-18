@@ -163,7 +163,6 @@ public class LoginFrg extends BaseWebFrg implements OnClickListener {
     @Override
     public void onResume() {
         super.onResume();
-        ((BaseActivity) getActivity()).tintManager.setTintColor(Color.parseColor("#ffffff"));
     }
 
     private void setListener() {

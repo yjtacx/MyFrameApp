@@ -1,4 +1,4 @@
-package com.yjt.frame.widget.titlebar.entity;
+package com.yjt.frame.widget.titlebar.barentity;
 
 import android.graphics.Color;
 
@@ -10,5 +10,5 @@ import com.yjt.frame.widget.titlebar.TitleBarConfig;
 public class BarTextEntity extends BaseBarEntity {
     public int textColor= Color.parseColor(TitleBarConfig.DEFAULT_BARTEXT_COLOR);
     public String text;
-    public boolean backable=false;
+    public boolean isbacktext=false;
 }

@@ -1,8 +1,6 @@
 package com.yjt.frame.frg;
 
 import com.yjt.frame.R;
-import com.yjt.frame.widget.titlebar.BarOrder;
-import com.yjt.frame.widget.titlebar.TitleBarView;
 
 /**
  * Created by yujiangtao on 16/3/31.

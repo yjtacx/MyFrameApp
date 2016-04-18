@@ -4,10 +4,10 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.yjt.frame.R;
+import com.yjt.frame.widget.titlebar.barHelper.BarType;
 import com.yjt.frame.widget.titlebar.TitleBarConfig;
 import com.yjt.frame.widget.titlebar.TitleBarView;
-import com.yjt.frame.widget.titlebar.entity.BarCustomViewEntity;
+import com.yjt.frame.widget.titlebar.barentity.BarCustomViewEntity;
 
 /**
  * Created by yujiangtao on 16/4/11.
@@ -33,12 +33,13 @@ public class CustomViewItem extends BarItem {
         this.bp = entity.barPosition;
         this.id = entity.id;
         this.clickable = entity.clickable;
+        barType = BarType.TCustomView;
     }
 
     @Override
-    protected void initItemView() {
+    protected void buildView() {
         int padding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                TitleBarConfig.ITEM_BUTTON_PADDING, mcontext.getResources().getDisplayMetrics());
+                TitleBarConfig.DEFAULT_ITEM_BUTTON_PADDING, mcontext.getResources().getDisplayMetrics());
         RelativeLayout.LayoutParams lp = null;
         switch (bp) {
             case Left:
@@ -72,32 +73,10 @@ public class CustomViewItem extends BarItem {
     }
 
     @Override
-    protected RelativeLayout.LayoutParams getLeftLayoutParams() {
-        RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) view.getLayoutParams();
-        if (id == R.id.titlebar_left_2)
-            lp.addRule(RelativeLayout.RIGHT_OF, R.id.titlebar_left_1);
-        else lp.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
-        lp.addRule(RelativeLayout.CENTER_VERTICAL);
-        return lp;
+    protected int getWidth() {
+        return RelativeLayout.LayoutParams.WRAP_CONTENT;
     }
 
-    @Override
-    protected RelativeLayout.LayoutParams getRightLayoutParams() {
-        RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) view.getLayoutParams();
-        if (id == R.id.titlebar_right_2)
-            lp.addRule(RelativeLayout.LEFT_OF, R.id.titlebar_right_1);
-        else if (id == R.id.titlebar_right_3)
-            lp.addRule(RelativeLayout.LEFT_OF, R.id.titlebar_right_2);
 
-        else lp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-        lp.addRule(RelativeLayout.CENTER_VERTICAL);
-        return lp;
-    }
 
-    @Override
-    protected RelativeLayout.LayoutParams getCenterLayoutParams() {
-        RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) view.getLayoutParams();
-        lp.addRule(RelativeLayout.CENTER_IN_PARENT);
-        return lp;
-    }
 }
